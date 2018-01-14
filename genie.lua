@@ -8,7 +8,7 @@ solution "AG"
 	flags{"ExtraWarnings"}
 project ("OpenGLProject")
 	kind ("ConsoleApp")
-	includedirs{"include", "src/deps/glfw", "src/deps/glad"}
+	includedirs{"include", "src/deps/glfw", "src/deps/glad", "src/deps/stb"}
 	files {"tests/*.cpp",
 		   "src/*.cpp",
 		   "src/*.h",
@@ -19,7 +19,8 @@ project ("OpenGLProject")
 		   "src/deps/glfw/monitor.c",
 		   "src/deps/glfw/window.c",
 		   "src/deps/glfw/vulkan.c",
-		   "src/deps/glad/glad.c"}
+		   "src/deps/glad/glad.c",
+			"src/deps/stb/*"}
 	defines {"_GLFW_USE_OPENGL=1"}
 	vpaths { ["Headers"] = "include/*.h",
 			 ["Source"]  =  "src/*.cpp",
